@@ -1,0 +1,11 @@
+com\hm\zhuydemo\mapper\StuMapper.class
+com\hm\zhuydemo\service\StuService.class
+com\hm\zhuydemo\entity\FacultyEntity.class
+com\hm\zhuydemo\web\utils\JSONResult.class
+com\hm\zhuydemo\entity\NodeEntity.class
+com\hm\zhuydemo\entity\ClassEntity.class
+com\hm\zhuydemo\web\pagehelper\PaginationResult.class
+com\hm\zhuydemo\entityVO\StuEntityVO.class
+com\hm\zhuydemo\entity\StuEntity.class
+com\hm\zhuydemo\web\controller\StuController.class
+com\hm\zhuydemo\service\impl\StuServiceImpl.class
