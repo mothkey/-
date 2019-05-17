@@ -152,24 +152,24 @@
                         <div class="modal-body">
                             <form role="form">
                                 <div class="form-group">
-                                    <label for="name">班级名称ssss</label>
+                                    <label for="editClassName">班级名称</label>
                                     <input type="text" class="form-control" id="editClassName"
-                                           placeholder="请输入名称">
+                                           readonly="readonly">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">姓名</label>
+                                    <label for="editStuName">姓名</label>
                                     <input type="text" class="form-control" id="editStuName"
-                                           placeholder="请输入名称">
+                                           placeholder="请输入姓名">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">年龄</label>
+                                    <label for="editAge">年龄</label>
                                     <input type="text" class="form-control" id="editAge"
-                                           placeholder="请输入名称">
+                                           placeholder="请输入年齡">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">编码</label>
+                                    <label for="editCode">编码</label>
                                     <input type="text" class="form-control" id="editCode"
-                                           placeholder="请输入名称">
+                                           placeholder="请输入编码">
                                 </div>
                             </form>
                         </div>
@@ -427,7 +427,6 @@
                             $("#alert").show();
                         }
                     });
-
                 };
 
                 return oInit;
