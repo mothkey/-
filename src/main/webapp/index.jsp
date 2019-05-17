@@ -152,7 +152,7 @@
                         <div class="modal-body">
                             <form role="form">
                                 <div class="form-group">
-                                    <label for="name">班级名称</label>
+                                    <label for="name">班级名称ssss</label>
                                     <input type="text" class="form-control" id="editClassName"
                                            placeholder="请输入名称">
                                 </div>
