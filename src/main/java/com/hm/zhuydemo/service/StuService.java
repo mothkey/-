@@ -11,29 +11,29 @@ import java.util.List;
 
 @Service
 public interface StuService {
-
-    /**
-     * 新增学生
-     * @param stu
-     * @return
-     */
-    int save(StuEntity stu);
-
-    /**
-     * 删除学生
-     * @param stu
-     * @return
-     */
-    int delStu(StuEntity stu);
-
-    /**
-     * 获取学生列表
-     * @param stu
-     * @return
-     */
-    List<StuEntityVO> getStuList(StuEntityVO stu);
-
-    List<ClassEntity> getClassList();
-
-    List<FacultyEntity> getFacultyList();
+//
+//    /**
+//     * 新增学生
+//     * @param stu
+//     * @return
+//     */
+//    int save(StuEntity stu);
+//
+//    /**
+//     * 删除学生
+//     * @param stu
+//     * @return
+//     */
+//    int delStu(StuEntity stu);
+//
+//    /**
+//     * 获取学生列表
+//     * @param stu
+//     * @return
+//     */
+//    List<StuEntityVO> getStuList(StuEntityVO stu);
+//
+//    List<ClassEntity> getClassList();
+//
+//    List<FacultyEntity> getFacultyList();
 }

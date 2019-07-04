@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace 必须跟 UserMapper 接口的全限定名称一致 -->
+<mapper namespace="mapper.StuMapper">
+
+    <!-- id 的取值必须跟 UserMapper 中相应方法名称一致 -->
+    <!-- parameterType 必须跟 UserMapper 中 save 方法的参数一致 -->
+    <!-- useGeneratedKeys = "true" 表示可以通过 mybatis 获取由数据库产生的主键 -->
+    <!-- keyProperty = "id" 表示将数据库产生的主键赋值给 User 对象的 id 属性中-->
+    <insert id="save" parameterType="com.hm.zhuydemo.entity.StuEntity" useGeneratedKeys="true" keyProperty="id">
+         INSERT INTO student (id,pid,name,age) VALUES (uuid(),#{pid},#{name},#{age})
+    </insert>
+
+    <select id="getStuList" parameterType="com.hm.zhuydemo.entityVO.StuEntityVO" resultType="com.hm.zhuydemo.entityVO.StuEntityVO">
+        SELECT s.*,c.name className,f.name facultName FROM student s
+            LEFT JOIN classment c ON s.pid = c.id
+            LEFT JOIN faculty f ON c.pid = f.id
+        WHERE 1=1
+        <if test="name != '' || name != null">
+            and s.name like CONCAT('%',#{name},'%')
+        </if>
+        <if test="className != '' || className != null">
+            and c.name like CONCAT('%',#{className},'%')
+        </if>
+        <if test="classId != '' || classId != null">
+            and c.id = #{classId}
+        </if>
+    </select>
+
+    <select id="getClassList" parameterType="com.hm.zhuydemo.entity.ClassEntity" resultType="com.hm.zhuydemo.entity.ClassEntity">
+        select c.* from classment c
+    </select>
+
+    <select id="getFacultyList" parameterType="com.hm.zhuydemo.entity.FacultyEntity" resultType="com.hm.zhuydemo.entity.FacultyEntity">
+        select f.* from faculty f
+    </select>
+
+    <delete id="delStu" parameterType="com.hm.zhuydemo.entity.StuEntity">
+        delete from student where id = #{id}
+    </delete>
+
+</mapper>
