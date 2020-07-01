@@ -72,7 +72,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.45</version>
+      <version>8.0.16</version>
     </dependency>
 
     <!-- 使用阿里巴巴提供的 druid 数据源支持-->
